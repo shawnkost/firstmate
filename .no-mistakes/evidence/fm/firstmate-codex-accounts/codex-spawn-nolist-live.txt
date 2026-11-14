@@ -1,0 +1,8 @@
+$ fm-spawn.sh live-nolist ... --harness codex  (no config/codex-accounts)
+spawned live-nolist harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-live-nolist worktree=$LAB/wt
+exit=0
+account= in meta: 0
+CODEX_HOME in launch: 0
+$ fm-spawn.sh live-nolist-acct ... --account /x  (no config/codex-accounts)
+error: --account '/x' needs config/codex-accounts, which this home does not declare
+exit=1

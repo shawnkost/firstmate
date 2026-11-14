@@ -1,0 +1,4 @@
+ok - each declared Codex home prints its own quota rows, read under its own CODEX_HOME
+ok - ordinary, unreadable, and rate-limited Codex accounts print facts and uncertainty
+ok - an absent or malformed Codex list refuses before any quota read
+# all fm-codex-account-quota tests passed

@@ -1,0 +1,20 @@
+$ fm-spawn.sh live-none ... --harness codex   (no --account)
+error: config/codex-accounts declares 3 Codex accounts, so a Codex ship or scout launch must name one with --account; bin/fm-codex-account-quota.sh measures each, and Firstmate never picks a default
+exit=1
+$ fm-spawn.sh live-undeclared ... --account /elsewhere
+error: account '/elsewhere' is not declared in config/codex-accounts; name a declared entry with --account
+exit=1
+$ fm-spawn.sh live-out ... --account $LAB/acct/signedout
+error: config/codex-accounts pins Codex workers to $LAB/acct/signedout, which is not signed in (codex login status); sign in with CODEX_HOME=$LAB/acct/signedout codex login, or change config/codex-accounts
+exit=1
+$ fm-spawn.sh live-second ... --account $LAB/acct/second
+warning: $LAB/data/live-second/launch-brief.md records no ship branch; defaulting to legacy branch fm/live-second
+warning: $LAB/data/live-second/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned live-second harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-live-second worktree=$LAB/wt account=$LAB/acct/second
+exit=0
+$ grep account= state/live-second.meta
+account=$LAB/acct/second
+$ recorded launch command
+export COMPACT_ADVISER_DISABLE=1; export FM_TASK_INBOX='/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.cinHkB/state/live-second.inbox'; '{run-worktree}/bin/fm-osc7501.sh' arm --task 'live-second' --harness 'codex' --backend 'tmux' --kind 'ship' --state '/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.cinHkB/state' --config '$LAB/config' --target 'firstmate:fm-live-second' --agent-bin 'codex' >/dev/null || true
+'{run-worktree}/bin/fm-git-strip-ai-trailers.sh' env-file '/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.cinHkB/state/live-second.git-hooks' '/tmp/fm-live-second+0e482551f97eb27ffa4ab7bf68869fa9d751aac028d853c7d74c55f02a182faa/git-config.s1794614856.44151.31930.sh' && . '/tmp/fm-live-second+0e482551f97eb27ffa4ab7bf68869fa9d751aac028d853c7d74c55f02a182faa/git-config.s1794614856.44151.31930.sh' || return 1 2>/dev/null || exit 1; export FM_HOME='$LAB'; env -u CODEX_API_KEY -u CODEX_ACCESS_TOKEN CODEX_HOME='$LAB/acct/second' env -u CURSOR_AGENT -u CURSOR_INVOKED_AS -u GEMINI_CLI codex --dangerously-bypass-approvals-and-sandbox --disable hooks -c "notify=[\"bash\",\"-c\",\"touch '/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.cinHkB/state/live-second.turn-ended'\"]" "$('{run-worktree}/bin/fm-operational-input.sh' encode launch-brief < '$LAB/data/live-second/launch-brief.md')"
+'{run-worktree}/bin/fm-osc7501.sh' disarm --state '/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.cinHkB/state' >/dev/null 2>/dev/null || true
