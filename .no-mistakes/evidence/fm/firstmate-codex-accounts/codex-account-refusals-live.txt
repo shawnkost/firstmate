@@ -1,0 +1,14 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: 335s ago, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  watcher supervision needs Stop-owned automatic recovery; inspect the hook registration and startup status before ending the turn.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: config/codex-accounts pins Codex workers to /private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/codex-signedout, which is not signed in (codex login status); sign in with CODEX_HOME=/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/codex-signedout codex login, or change config/codex-accounts
+rc=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC
+WARNING: watcher still down (same stale episode; last beat: 337s ago, grace 300s) - full banner already printed this episode.
+error: account '/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/codex-personal' is not declared in config/codex-accounts; name a declared entry with --account
+rc=1

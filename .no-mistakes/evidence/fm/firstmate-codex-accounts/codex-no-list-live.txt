@@ -1,0 +1,10 @@
+(config/codex-accounts removed)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC
+error: --account '/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/codex-work' needs config/codex-accounts, which this home does not declare
+rc=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC
+spawned scout-plain harness=codex kind=scout window=primary:fm-scout-plain worktree=/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/treehouse/.treehouse/demo-a2e429/2/demo
+rc=0
+--- account= lines in state/scout-plain.meta: 0
+--- codex pid 4440 account vars (unchanged from pane, expect inherited CODEX_API_KEY and no CODEX_HOME):
+CODEX_API_KEY=ambient-should-be-shed

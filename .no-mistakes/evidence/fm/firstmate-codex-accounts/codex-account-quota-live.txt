@@ -1,12 +1,10 @@
 $ cat config/codex-accounts
-ordinary
-$LAB/acct/second
-$LAB/acct/signedout
-$ bin/fm-codex-account-quota.sh
+/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-work
+/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-personal
+$ FM_HOME=$LAB bin/fm-codex-account-quota.sh
 codex-account-quota:
-  row: ordinary  root=~/.codex  scope=all_models  status=known  remaining=0%  spendPriority=-1.5848  runway=exhausted_now  usableRunwaySeconds=0
-  row: $LAB/acct/second  root=$LAB/acct/second  uncertainty: quota unknown (error: Codex credential invalid)
-  row: $LAB/acct/second  root=$LAB/acct/second  uncertainty: no applicable quota scope
-  row: $LAB/acct/signedout  root=$LAB/acct/signedout  uncertainty: quota unknown (unavailable: Codex profile credentials missing)
-  row: $LAB/acct/signedout  root=$LAB/acct/signedout  uncertainty: no applicable quota scope
-exit=0
+  row: /var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-work  root=/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-work  uncertainty: quota unknown (error: Codex credential invalid)
+  row: /var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-work  root=/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-work  uncertainty: no applicable quota scope
+  row: /var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-personal  root=/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-personal  uncertainty: quota unknown (error: Codex credential invalid)
+  row: /var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-personal  root=/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T//fm-lab.PivfmC/codex-personal  uncertainty: no applicable quota scope
+rc=0

@@ -1,0 +1,12 @@
+$ bin/fm-control.sh scout-acct relaunch --note 'lab relaunch check'
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC
+relaunched scout-acct harness=codex from=codex model=default effort=default backend=tmux endpoint=primary:fm-scout-acct worktree=/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/treehouse/.treehouse/demo-a2e429/1/demo
+rc=0
+--- state/scout-acct.meta account line after relaunch:
+account=/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/codex-personal
+--- relaunched codex pid 30022 env:
+CODEX_HOME=/private/var/folders/w6/1rbpq9ls10jgtv8npf78sj1m0000gn/T/fm-lab.PivfmC/codex-personal
+■ unexpected status 401 Unauthorized: Incorrect API key provided: sk-fm-la******onal. You can find your API key at https://platform.openai.com/account/api-keys., url: https://api.openai.com/v1/
+responses, cf-ray: a603b768cc537a29-LAX, request id: req_ba6d0229bda7465184adbe9e9d0ae1e1, auth error: 401, auth error code: invalid_api_key
+› Ask Codex to do anything
